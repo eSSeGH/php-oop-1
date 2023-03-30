@@ -25,28 +25,28 @@ require_once "./db.php";
 
                 <div class="my-col" style="width: calc(100%/4 - 90px/4);">
                     <div class="card" style="width: 18rem;">
-                        <img src="<?php echo $movie1->img ?>" class="card-img-top" style="height: 382px; overflow: hidden;" alt="...">
+                        <img src="<?php echo $movie1->img; ?>" class="card-img-top" style="height: 382px; overflow: hidden;" alt="...">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title"><?php echo $movie1->title ?></h5>
-                            <p class="card-text"><?php echo $movie1->plot ?></p>
-                            <span class="card-text"><?php echo $movie1->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie1->film_genre->getAllGenres() ?></span>
-                            <span class="card-text"><?php echo $movie1->year ?></span>
-                            <span class="card-text">Il film è stato prodotto <?php echo $movie1->getMovieAge() ?> anni fa!</span>
+                            <h5 class="card-title"><?php echo $movie1->title; ?></h5>
+                            <p class="card-text"><?php echo $movie1->plot; ?></p>
+                            <span class="card-text"><?php echo $movie1->getLang(); ?></span>
+                            <span class="card-text"><?php echo $movie1->film_genre->getAllGenres(); ?></span>
+                            <span class="card-text"><?php echo $movie1->year; ?></span>
+                            <span class="card-text">Il film è stato prodotto <?php echo $movie1->getMovieAge(); ?> anni fa!</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="my-col" style="width: calc(100%/4 - 90px/4);">
                     <div class="card" style="width: 18rem;">
-                        <img src="<?php echo $movie2->img ?>" class="card-img-top" style="height: 382px; overflow: hidden;" alt="...">
+                        <img src="<?php echo $movie2->img; ?>" class="card-img-top" style="height: 382px; overflow: hidden;" alt="...">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title"><?php echo $movie2->title ?></h5>
-                            <p class="card-text"><?php echo $movie2->plot ?></p>
-                            <span class="card-text"><?php echo $movie2->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie2->film_genre->getAllGenres() ?></span>
-                            <span class="card-text"><?php echo $movie2->year ?></span>
-                            <span class="card-text">Il film è stato prodotto <?php echo $movie2->getMovieAge() ?> anni fa!</span>
+                            <h5 class="card-title"><?php echo $movie2->title; ?></h5>
+                            <p class="card-text"><?php echo $movie2->plot; ?></p>
+                            <span class="card-text"><?php echo $movie2->getLang(); ?></span>
+                            <span class="card-text"><?php echo $movie2->film_genre->getAllGenres(); ?></span>
+                            <span class="card-text"><?php echo $movie2->year; ?></span>
+                            <span class="card-text">Il film è stato prodotto <?php echo $movie2->getMovieAge(); ?> anni fa!</span>
                         </div>
                     </div>
                 </div>
