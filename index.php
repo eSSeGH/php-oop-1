@@ -7,16 +7,24 @@ $movie1 = new Movie(
     'it_IT',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, molestias. Nostrum beatae totam autem dolor, accusamus excepturi maiores ad reprehenderit?',
     1997,
-    'commedia',
+    new MovieGenre('commedia'),
     './img/locandina-lavitaèbella.jpg' );
+
+$movie1->film_genre->movie_genre2 = 'drammatico';
 
 $movie2 = new Movie(
     'Tenet',
     'eng_US',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, molestias. Nostrum beatae totam autem dolor, accusamus excepturi maiores ad reprehenderit?',
     2020,
-    'azione',
+    new MovieGenre('azione'),
     './img/locandina-tenet.jpg' );
+
+$movie2->film_genre->movie_genre2 = 'fantascienza';
+$movie2->film_genre->movie_genre3 = 'spionaggio';
+$movie2->film_genre->movie_genre4 = 'thriller';
+
+var_dump($movie2->film_genre)
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +54,7 @@ $movie2 = new Movie(
                             <h5 class="card-title"><?php echo $movie1->title ?></h5>
                             <p class="card-text"><?php echo $movie1->plot ?></p>
                             <span class="card-text"><?php echo $movie1->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie1->film_genre ?></span>
+                            <span class="card-text"><?php echo $movie1->film_genre->getAllGenres() ?></span>
                             <span class="card-text"><?php echo $movie1->year ?></span>
                             <span class="card-text">Il film è stato prodotto <?php echo $movie1->getMovieAge() ?> anni fa!</span>
                         </div>
@@ -60,7 +68,7 @@ $movie2 = new Movie(
                             <h5 class="card-title"><?php echo $movie2->title ?></h5>
                             <p class="card-text"><?php echo $movie2->plot ?></p>
                             <span class="card-text"><?php echo $movie2->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie2->film_genre ?></span>
+                            <span class="card-text"><?php echo $movie2->film_genre->getAllGenres() ?></span>
                             <span class="card-text"><?php echo $movie2->year ?></span>
                             <span class="card-text">Il film è stato prodotto <?php echo $movie2->getMovieAge() ?> anni fa!</span>
                         </div>
@@ -73,7 +81,7 @@ $movie2 = new Movie(
                             <h5 class="card-title"><?php echo $movie1->title ?></h5>
                             <p class="card-text"><?php echo $movie1->plot ?></p>
                             <span class="card-text"><?php echo $movie1->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie1->film_genre ?></span>
+                            <span class="card-text"><?php echo $movie1->film_genre->getAllGenres() ?></span>
                             <span class="card-text"><?php echo $movie1->year ?></span>
                             <span class="card-text">Il film è stato prodotto <?php echo $movie1->getMovieAge() ?> anni fa!</span>
                         </div>
@@ -87,7 +95,7 @@ $movie2 = new Movie(
                             <h5 class="card-title"><?php echo $movie2->title ?></h5>
                             <p class="card-text"><?php echo $movie2->plot ?></p>
                             <span class="card-text"><?php echo $movie2->getLang() ?></span>
-                            <span class="card-text"><?php echo $movie2->film_genre ?></span>
+                            <span class="card-text"><?php echo $movie2->film_genre->getAllGenres() ?></span>
                             <span class="card-text"><?php echo $movie2->year ?></span>
                             <span class="card-text">Il film è stato prodotto <?php echo $movie2->getMovieAge() ?> anni fa!</span>
                         </div>

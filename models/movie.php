@@ -1,16 +1,17 @@
 <?php
 
+require_once __DIR__."./movie-genre.php";
 
 class Movie {
 
     public string $title;
     public string $language;
-    public string $film_genre;
+    public $film_genre;
     public string $plot;
     public int $year;
     public string $img;
 
-    function __construct($_title, $_language, $_plot, $_year, $_film_genre, $_img) {
+    function __construct($_title, $_language, $_plot, $_year, MovieGenre $_film_genre, $_img) {
 
         $this->title = $_title;
         $this->language = $_language;
